@@ -11,6 +11,6 @@ docker push heeleeaz/multi-server:$SHA
 docker push heeleeaz/multi-worker:$SHA
 
 kubectl apply -f k8s
-kubectl set image deployments/server-deployment server=cygnetops/multi-server
-kubectl set image deployments/client-deployment client=cygnetops/multi-client
-kubectl set image deployments/worker-deployment worker=cygnetops/multi-worker
+kubectl set image deployments/server-deployment server=heeleeaz/multi-server:$SHA
+kubectl set image deployments/client-deployment client=heeleeaz/multi-client:$SHA
+kubectl set image deployments/worker-deployment worker=heeleeaz/multi-worker:$SHA
